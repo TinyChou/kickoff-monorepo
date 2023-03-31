@@ -10,7 +10,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "docker": "docker run -p 8080:80 --rm -it $(docker build --build-arg admin .)",
+    "docker": "docker run -p 8080:80 --rm -it $(docker build --build-arg admin -q .)",
     "docker-prune": "docker image prune"
   },
   "dependencies": {
